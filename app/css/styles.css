@@ -426,9 +426,6 @@ header .right .button {
   color: #aaa;
   margin-right: 10px;
 }
-* {
-  background: rgba(255,255,255,0.05);
-}
 html,
 body {
   background: #001825;
