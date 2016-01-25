@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="t2m">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- build:css css/dependencies.concat.min.css -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <!-- endbuild -->
+
+  <!-- build:css css/styles.concat.min.css -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- endbuild -->
+
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+  <!--[if lt IE 9]>
+  <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+  <script src="bower_components/respond/dest/respond.min.js"></script>
+  <![endif]-->
+
+
+</head>
+<body ng-controller="mainController">
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<header ui-view="header">
+
+</header>
+
+<canvas id="stars"></canvas>
+
+<section class="container" ui-view="container">
+
+</section>
+
+<div mobile-tweet-editor></div>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<!-- CDN -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.velocity.js"></script>
+
+<!-- build:js js/dependencies.concat.min.js -->
+<!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angularjs/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-moment/angular-moment.min.js"></script>
+<script src="js/canvas.js"></script>
+<!-- endbuild -->
+
+<!-- build:js js/app.concat.min.js -->
+<script src="js/app.js"></script>
+
+<!--MODELS-->
+
+<!--DIRECTIVES-->
+<script src="js/directives/stamp.js"></script>
+<script src="js/directives/mobile_tweet_editor.js"></script>
+
+<!--CONTROLLERS-->
+<script src="js/controllers/main_controller.js"></script>
+<!-- endbuild -->
+
+
+</body>
+</html>

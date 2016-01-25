@@ -1,0 +1,26 @@
+{
+  "name": "app-name",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marco Andreotti",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "*",
+    "bower": "*",
+    "grunt-usemin": "*",
+    "load-grunt-tasks": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-filerev": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-build-control": "*",
+    "grunt-shell": "*"
+  }
+}
+

@@ -1,0 +1,52 @@
+<div class="screen above">
+    <div class="left" id="scroll">
+        <div class="page-box" scroll-to="#slide1">
+            <h1>Page 1</h1>
+            <p>Some content</p>
+        </div>
+
+        <div class="page-box" scroll-to="#slide2">
+            <h1>Page 2</h1>
+            <p>Some content</p>
+        </div>
+
+        <div class="page-box" scroll-to="#slide3">
+            <h1>Page 3</h1>
+            <p>Some content</p>
+        </div>
+    </div>
+
+    <div id="scrollContainer" class="right">
+        <div id="slide1" class="slide-box">
+            <h2>Slide 1</h2>
+        </div>
+
+        <div id="slide2" class="slide-box">
+            <h2>Slide 2</h2>
+        </div>
+
+        <div id="slide3" class="slide-box">
+            <h2>Slide 3</h2>
+        </div>
+    </div>
+</div>
+
+<script>
+    var $container = $('#scrollContainer');
+    var $triggers = $('.page-box');
+
+    var controller = new ScrollMagic.Controller({container: "#scroll"});
+
+
+
+    $triggers.each(function(i, trigger) {
+        new ScrollMagic.Scene({triggerElement: trigger})
+                .setVelocity($(trigger).attr("scroll-to"), 'scroll', {container: $container[0]})
+                .addTo(controller)
+    })
+
+    window.c = controller
+
+
+
+</script>

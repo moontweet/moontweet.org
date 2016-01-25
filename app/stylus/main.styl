@@ -1,0 +1,102 @@
+// Vendors
+@import "jeet";
+@import "rupture";
+
+// Modules and Variables
+@import "vars";
+@import "pages/**";
+
+@import "components/**/**";
+
+//
+//// Components
+//@import "components/*"
+//
+//// Custom
+//@import "custom/*"
+//@import "custom/*/**"
+//
+////Pages
+//@import "pages/*";
+//@import "pages/newsbooks";
+
+edit(#fff);
+
+html, body {
+  background: $background;
+  color: $text-color;
+  font-family: "Droid Serif";
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
++desktop() {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+    height: 100%;
+  }
+
+}
+
++tablet() {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+    height: 100%;
+  }
+
+}
+
++mobile() {
+  .mobile {
+    display: block;
+    height: 100%;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+}
+
+.container {
+  box-sizing: border-box;
+  padding: $layout-margin;
+  height: 100%;
+
+  +mobile() {
+    padding: 0 20px;
+  }
+}
+
+.above {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: $header-height * 2;
+  +mobile() {
+    padding-top: $mobile-header-height * 2;
+  }
+  height: 100vh;
+}
+
+.mono-text {
+  color: #34474b;
+  font-family: "Cutive Mono";
+}
+
+
+
+

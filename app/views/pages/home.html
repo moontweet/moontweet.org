@@ -1,0 +1,65 @@
+<div class="desktop">
+    <div class="above">
+
+        <div class="card">
+            <img class="stamp" src="images/stamp.svg">
+
+            <div class="text-container">
+                <p class="head">
+                    Planet Earth<br>
+                    13 December 2016
+                </p>
+
+                <textarea ng-model="tweetText"></textarea>
+
+            </div>
+
+            <div class="card-footer">
+                <span>{{ 140 - tweetText.length }}</span>
+                <a class="button button-twitter button-rounded">Tweet</a>
+            </div>
+        </div>
+
+        <div class="counter">
+            <span class="mono-text">180.000.000 SPOT LEFT</span>
+        </div>
+
+        <div class="scroll-mouse">
+            <i class="ion-mouse"></i>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="mobile">
+
+    <div class="above">
+
+
+        <div class="headline">
+            <h1 class="mono-text">Deliver a tweet<br> to the moon</h1>
+            <a class="mono-text" href="#">THE MANIFEST</a>
+        </div>
+
+        <div class="footer">
+            <a ng-click="openMobileEditor()" class="button button-block button-twitter button-rounded">Write a tweet</a>
+            <p class="mono-text">180.000.000 spot left</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="below">
+    <p>
+        Send a tweet out of the earth <br>
+        it will be delivered on the moon surface <br>
+        late in 2016 with a spacecraft
+    </p>
+
+    <a href="#" class="mono-text">HOW DOES IT HAPPEN?</a>
+
+    <a class="twitter-grid" href="https://twitter.com/TwitterDev/timelines/539487832448843776">National Park
+        Tweets</a>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>

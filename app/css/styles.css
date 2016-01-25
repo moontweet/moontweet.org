@@ -1,0 +1,496 @@
+#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.desktop .headline {
+  text-align: center;
+}
+.desktop .counter {
+  margin-top: 40px;
+  text-align: center;
+}
+.desktop .scroll-mouse {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2em;
+}
+.mobile .headline {
+  margin-top: 50px;
+}
+.mobile .headline h1 {
+  color: #fff;
+}
+.mobile .headline a {
+  color: #00aced;
+}
+.mobile .footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90px;
+  text-align: center;
+}
+.mobile .footer p {
+  color: #fff;
+}
+.below {
+  text-align: center;
+  height: 100vh;
+  padding-top: 100px;
+}
+@media only screen and (max-width: 400px) {
+  .below {
+    padding-top: 65px;
+  }
+}
+.below p {
+  color: #fff;
+  text-transform: uppercase;
+}
+.below a {
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  color: #00aced;
+}
+.screen {
+  padding: 0;
+}
+.screen .left {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 100%;
+  overflow-y: scroll;
+}
+.screen .left:before,
+.screen .left:after {
+  content: '';
+  display: table;
+}
+.screen .left:after {
+  clear: both;
+}
+.screen .left .page-box {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100%;
+}
+.screen .right {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 100%;
+  overflow-y: hidden;
+}
+.screen .right:before,
+.screen .right:after {
+  content: '';
+  display: table;
+}
+.screen .right:after {
+  clear: both;
+}
+.screen .right .slide-box {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100%;
+}
+.card {
+  box-sizing: border-box;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+  min-height: 300px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 80px;
+  color: #333;
+}
+@media only screen and (max-width: 400px) {
+  .card {
+    display: none;
+  }
+}
+.card .stamp {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.card .tweet-image {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 100%;
+  max-height: 300px;
+}
+.card .text-container {
+  padding: 20px;
+  font-size: 16px;
+}
+.card .text-container textarea {
+  width: 100%;
+  height: 130px;
+  border: none;
+}
+.card .card-footer {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 20px 40px;
+  text-align: right;
+  margin-top: 30px;
+}
+.card .card-footer .picture-container {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 55px;
+}
+.card .card-footer .picture-container .author-picture {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 50%;
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card .card-footer .details-container {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+.card .card-footer .details-container .details {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card .card-footer .details-container .details .author {
+  display: block;
+  color: #555;
+  font-size: 0.8em;
+}
+.card .card-footer .details-container .details .date {
+  display: block;
+  color: #aaa;
+  font-size: 0.8em;
+}
+.card .head {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+header {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 0 60px;
+}
+@media only screen and (max-width: 400px) {
+  header {
+    height: 65px;
+    padding: 0 20px;
+  }
+  header .stamp {
+    float: right;
+    margin-top: 20px;
+  }
+  header .stamp path {
+    fill: #fff;
+  }
+}
+header .left {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.66666666666666%;
+  margin-left: 0%;
+  margin-right: 3%;
+  height: 100px;
+}
+header .left:before,
+header .left:after {
+  content: '';
+  display: table;
+}
+header .left:after {
+  clear: both;
+}
+header .left:last-child {
+  margin-right: 0%;
+}
+@media only screen and (max-width: 400px) {
+  header .left {
+    height: 65px;
+  }
+}
+header .left .moontweet {
+  line-height: 100px;
+}
+@media only screen and (max-width: 400px) {
+  header .left .moontweet {
+    line-height: 65px;
+  }
+}
+header .left .moontweet .menu-icon {
+  font-size: 2.1rem;
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header .left .moontweet .title {
+  font-family: monospace;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 400px) {
+  header .left .moontweet .title {
+    font-size: 1.5rem;
+    margin-left: 40px;
+  }
+}
+header .left .moontweet .claim {
+  margin-left: 20px;
+  font-size: 0.8rem;
+}
+header .left ul.nav {
+  display: inline-block;
+  vertical-align: top;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  margin-left: 30px;
+}
+header .left ul.nav li {
+  float: left;
+  margin-right: 10px;
+}
+header .left ul.nav li a:hover {
+  text-decoration: underline;
+}
+header .right {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+  position: relative;
+  height: 100px;
+}
+header .right:before,
+header .right:after {
+  content: '';
+  display: table;
+}
+header .right:after {
+  clear: both;
+}
+header .right:last-child {
+  margin-right: 0%;
+}
+@media only screen and (max-width: 400px) {
+  header .right {
+    height: 65px;
+  }
+}
+header .right .button {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+.mobile-tweet-editor {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  box-sizing: border-box;
+}
+.mobile-tweet-editor img.stamp {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+.mobile-tweet-editor .text-container {
+  box-sizing: border-box;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  padding: 60px 30px;
+}
+.mobile-tweet-editor .text-container .heading {
+  color: #555;
+  height: 50px;
+}
+.mobile-tweet-editor .text-container textarea.text {
+  box-sizing: border-box;
+  padding-bottom: 100px;
+  width: 100%;
+  height: calc(100% - 60px - 50px);
+  border: 0;
+  font-size: 1.2em;
+}
+.mobile-tweet-editor .footer {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  padding: 0 20px;
+}
+.mobile-tweet-editor .footer .left {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 33.33333333333333%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 100%;
+}
+.mobile-tweet-editor .footer .left:before,
+.mobile-tweet-editor .footer .left:after {
+  content: '';
+  display: table;
+}
+.mobile-tweet-editor .footer .left:after {
+  clear: both;
+}
+.mobile-tweet-editor .footer .left .cancel {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+.mobile-tweet-editor .footer .right {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 66.66666666666666%;
+  margin-left: 0%;
+  margin-right: 0%;
+  height: 100%;
+  position: relative;
+}
+.mobile-tweet-editor .footer .right:before,
+.mobile-tweet-editor .footer .right:after {
+  content: '';
+  display: table;
+}
+.mobile-tweet-editor .footer .right:after {
+  clear: both;
+}
+.mobile-tweet-editor .footer .right >div {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  width: 100%;
+}
+.mobile-tweet-editor .footer .right >div .letter-counter {
+  color: #aaa;
+  margin-right: 10px;
+}
+* {
+  background: rgba(255,255,255,0.05);
+}
+html,
+body {
+  background: #001825;
+  color: #fff;
+  font-family: "Droid Serif";
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+@media only screen and (min-width: 1050px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 1050px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .mobile {
+    display: block;
+    height: 100%;
+  }
+  .desktop {
+    display: none;
+  }
+}
+.container {
+  box-sizing: border-box;
+  padding: 0 60px;
+  height: 100%;
+}
+@media only screen and (max-width: 400px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+.above {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 200px;
+  height: 100vh;
+}
+@media only screen and (max-width: 400px) {
+  .above {
+    padding-top: 130px;
+  }
+}
+.mono-text {
+  color: #34474b;
+  font-family: "Cutive Mono";
+}
