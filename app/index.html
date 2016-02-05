@@ -15,7 +15,7 @@
 
   <!-- Fonts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- CSS
@@ -46,7 +46,7 @@
 
 </header>
 
-<canvas id="stars"></canvas>
+<canvas id="stars" ng-class="{hidden: !$state.current.animation}"></canvas>
 
 <section class="container" ui-view="container">
 
@@ -59,12 +59,11 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <!-- CDN -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
 <script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.velocity.js"></script>
-
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 <!-- build:js js/dependencies.concat.min.js -->
 <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
 <script src="bower_components/moment/moment.js"></script>
@@ -82,6 +81,7 @@
 <!--DIRECTIVES-->
 <script src="js/directives/stamp.js"></script>
 <script src="js/directives/mobile_tweet_editor.js"></script>
+<script src="js/directives/tweet_id.js"></script>
 
 <!--CONTROLLERS-->
 <script src="js/controllers/main_controller.js"></script>

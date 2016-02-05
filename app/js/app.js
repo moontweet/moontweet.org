@@ -18,10 +18,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                     templateUrl: "views/pages/home.html",
                     //controller: "HomeController"
                 }
-            }
+            },
+            animation: true
         })
         .state('tweets', {
-            url: "/tweets",
+            url: "/tweets/:id",
             views: {
                 'header': {
                     templateUrl: "views/partials/header_nav.html"
@@ -30,7 +31,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                     templateUrl: "views/pages/show.html",
                     //controller: "HomeController"
                 }
-            }
+            },
+            animation: true
         })
         .state('how', {
             url: "/how",
@@ -42,7 +44,8 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
                     templateUrl: "views/pages/how.html",
                     //controller: "HomeController"
                 }
-            }
+            },
+            animation: false
         })
 }]);
 

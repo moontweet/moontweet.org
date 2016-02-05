@@ -1,52 +1,161 @@
 <div class="screen above">
     <div class="left" id="scroll">
-        <div class="page-box" scroll-to="#slide1">
-            <h1>Page 1</h1>
-            <p>Some content</p>
-        </div>
+        <div class="scrollable">
+            <div class="page-box">
+                <div class="content">
+                    <h6>HOW IT WORKS</h6>
 
-        <div class="page-box" scroll-to="#slide2">
-            <h1>Page 2</h1>
-            <p>Some content</p>
-        </div>
+                    <h2>Moontweet</h2>
 
-        <div class="page-box" scroll-to="#slide3">
-            <h1>Page 3</h1>
-            <p>Some content</p>
+                    <p>Moon tweet is accepting limited 140 ch. long messages for the first astrobotic's lunar mission.
+                        The
+                        messages
+                        will be stored in digital format within a capsule integrated into a single Moon Pod on the lunar
+                        lander.</p>
+
+                    <p>Late in 2016 it will be delivered on the moon surface where it stay forever as human
+                        memories.</p>
+                    About Astrobotic
+
+
+                    <img src="http://placehold.it/200x150">
+
+                </div>
+            </div>
+
+            <div class="page-box">
+                <div class="content">
+                    <h6>STAGE ONE</h6>
+
+                    <h2>Write your message</h2>
+
+                    <p>Be inspired and share your dreams, ideas or thoughts with the entire humanity. We will land your
+                        message
+                        within a digital storage on the moon surface and stream it forever on moontweet.org</p>
+
+                    Write your tweet
+
+
+                    <img src="http://placehold.it/200x150">
+
+                </div>
+            </div>
+
+            <div class="page-box">
+                <div class="content">
+
+                    <h6>STAGE TWO</h6>
+
+                    <h2>Follow the mission update</h2>
+
+                    <p>As an official participant of the Astrobotic's mission we will provide you insider updates on
+                        spacecraft
+                        deployment from the launch vehicle, lunar orbit insertion, descent to the surface, and the Moon
+                        landing.</p>
+
+                    <img src="http://placehold.it/200x150">
+
+                </div>
+            </div>
+
+            <div class="page-box">
+                <div class="content">
+
+                    <h6>FINAL STAGE</h6>
+
+                    <h2>Tweets land one the moon surface</h2>
+
+                    <p>After the Moon landing, you will receive images and videos of the Moon Pod on the Moon, attached
+                        to
+                        Astrobotic's lander.</p>
+
+                    <p>These photos will be the official record of your permanent tweet on the Moon.</p>
+
+                    <img src="http://placehold.it/200x150">
+
+                </div>
+            </div>
         </div>
     </div>
 
-    <div id="scrollContainer" class="right">
+    <div id="scrollContainer" class="right" style="position: relative">
         <div id="slide1" class="slide-box">
-            <h2>Slide 1</h2>
+            <img src="http://placehold.it/350x150">
         </div>
 
         <div id="slide2" class="slide-box">
-            <h2>Slide 2</h2>
+            <img src="http://placehold.it/350x150">
         </div>
 
         <div id="slide3" class="slide-box">
-            <h2>Slide 3</h2>
+            <img src="http://placehold.it/350x150">
+        </div>
+
+        <div id="slide4" class="slide-box">
+            <img src="http://placehold.it/350x150">
         </div>
     </div>
 </div>
 
+<section class="footer">
+    <i class="ion-social-twitter"></i>
+    <i class="ion-social-facebook"></i>
+
+    <ul>
+        <li>ABOUT</li>
+        <li>PRIVACY</li>
+    </ul>
+</section>
+
+
 <script>
-    var $container = $('#scrollContainer');
-    var $triggers = $('.page-box');
-
     var controller = new ScrollMagic.Controller({container: "#scroll"});
+    var pageBoxes = $('.page-box');
 
+    new ScrollMagic.Scene({triggerElement: pageBoxes[1]})
+            .on("enter", function () {
+                $('#slide2').velocity('scroll', {
+                    container: $("#scrollContainer")
+                })
+            })
+            .on("leave", function () {
+                $('#slide1').velocity('scroll', {
+                    container: $("#scrollContainer")
+                })
+            })
+            .offset($(pageBoxes[1]).height() / 2)
+            //.addIndicators() // add indicators (requires plugin)
+            .addTo(controller)
 
+    new ScrollMagic.Scene({triggerElement: pageBoxes[2]})
+            .on("enter", function () {
+                $('#slide3').velocity('scroll', {
+                    container: $("#scrollContainer")
+                })
+            })
+            .on("leave", function () {
+                $('#slide2').velocity('scroll', {
+                    container: $("#scrollContainer")
+                })
+            })
+            .offset($(pageBoxes[2]).height() / 2)
+            //.addIndicators() // add indicators (requires plugin)
+            .addTo(controller)
 
-    $triggers.each(function(i, trigger) {
-        new ScrollMagic.Scene({triggerElement: trigger})
-                .setVelocity($(trigger).attr("scroll-to"), 'scroll', {container: $container[0]})
-                .addTo(controller)
-    })
-
-    window.c = controller
-
+    new ScrollMagic.Scene({triggerElement: pageBoxes[3]})
+            .on("enter", function () {
+                $('#slide4').velocity('scroll', {
+                    container: $("#scrollContainer")
+                })
+            })
+            .on("leave", function () {
+                $('#slide3').velocity('scroll', {
+                    container: $("#scrollContainer")
+                })
+            })
+            .offset($(pageBoxes[3]).height() / 2)
+            //.addIndicators() // add indicators (requires plugin)
+            .addTo(controller)
 
 
 </script>
