@@ -1,7 +1,15 @@
-<div class="desktop">
+<div class="desktop" intro>
     <div class="above">
 
-        <div class="card">
+        <div id="headline1" class="headline absolute-center">
+            <h1>Spread your world</h1>
+        </div>
+
+        <div id="headline2" class="headline absolute-center">
+            <h1>Deliver a tweet<br>to the moon surface</h1>
+        </div>
+
+        <div class="card fluo absolute-center no-mobile">
             <img class="stamp" src="images/stamp.svg">
 
             <div class="text-container">
@@ -10,23 +18,26 @@
                     13 December 2016
                 </p>
 
-                <textarea ng-model="tweetText"></textarea>
+                <textarea maxlength="140" ng-trim="false" ng-model="tweetText"></textarea>
 
             </div>
 
             <div class="card-footer">
                 <span>{{ 140 - tweetText.length }}</span>
-                <a class="button button-twitter button-rounded">Tweet</a>
+                <a class="button button-twitter button-rounded popup" href="http://twitter.com/share?url=false&text={{ tweetText | escape }}">Tweet</a>
             </div>
         </div>
 
-        <div class="counter">
-            <span class="mono-text">180.000.000 SPOT LEFT</span>
+        <div class="above-footer">
+            <div class="counter">
+                <span class="mono-text">180.000.000 SPOT LEFT</span>
+            </div>
+
+            <div class="scroll-mouse">
+                <i class="ion-mouse"></i>
+            </div>
         </div>
 
-        <div class="scroll-mouse">
-            <i class="ion-mouse"></i>
-        </div>
 
     </div>
 
@@ -37,21 +48,20 @@
     <div class="above">
 
 
-        <div class="headline">
-            <h1 class="mono-text">Deliver a tweet<br> to the moon</h1>
-            <a class="mono-text" ui-sref="how">THE MANIFEST</a>
+        <div class="headline" style="opacity: 0">
+            <h1 class="mono-text">Spread your world,<br>Deliver a tweet<br> to the moon</h1>
+            <a ui-sref="how">HOW IT WORKS</a>
         </div>
 
-        <div class="footer">
+        <div class="footer" style="opacity: 0">
             <a ng-click="openMobileEditor()" class="button button-block button-twitter button-rounded">Write a tweet</a>
-            <p class="mono-text">180.000.000 spot left</p>
         </div>
     </div>
 
 </div>
 
 <div class="below">
-    <p>
+    <p class="mono-text">
         Send a tweet out of the earth <br>
         it will be delivered on the moon surface <br>
         late in 2016 with a spacecraft
@@ -63,3 +73,28 @@
         Tweets</a>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+
+<div mobile-tweet-editor></div>
+
+
+<script>
+    $('.mobile .headline').velocity({opacity: 1}, {delay: 500, duration: 1000})
+    $('.mobile .footer').velocity({opacity: 1}, {delay: 1500, duration: 1000})
+
+    $('.popup').click(function(event) {
+        var width  = 575,
+                height = 400,
+                left   = ($(window).width()  - width)  / 2,
+                top    = ($(window).height() - height) / 2,
+                url    = this.href,
+                opts   = 'status=1' +
+                        ',width='  + width  +
+                        ',height=' + height +
+                        ',top='    + top    +
+                        ',left='   + left;
+
+        window.open(url, 'twitter', opts);
+
+        return false;
+    });
+</script>

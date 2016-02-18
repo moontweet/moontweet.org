@@ -9,27 +9,27 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     // Now set up the states
     $stateProvider
         .state('home', {
-            url: "/",
+            url: "/?a",
             views: {
                 'header': {
                     templateUrl: "views/partials/header_home.html"
                 },
                 'container': {
                     templateUrl: "views/pages/home.html",
-                    //controller: "HomeController"
+                    controller: "homeController"
                 }
             },
             animation: true
         })
         .state('tweets', {
-            url: "/tweets/:id",
+            url: "/tweets/:sname?n",
             views: {
                 'header': {
                     templateUrl: "views/partials/header_nav.html"
                 },
                 'container': {
                     templateUrl: "views/pages/show.html",
-                    //controller: "HomeController"
+                    controller: "tweetsController"
                 }
             },
             animation: true
@@ -48,6 +48,15 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             animation: false
         })
 }]);
+
+app.filter('escape', function() {
+    return function(input) {
+        if(input) {
+            return window.encodeURIComponent(input);
+        }
+        return "";
+    }
+});
 
 function angularget(name) {
     return angular.element($("body")[0]).injector().get(name)

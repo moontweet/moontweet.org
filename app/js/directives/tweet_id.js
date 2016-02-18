@@ -28,25 +28,32 @@ app.directive("tweetId", [function() {
                 function() {
                     return attr["tweetId"];
                 },
-                function() {
-                    injectTweet(attr["tweetId"])
+                function(tid) {
+                    if (tid)
+                        injectTweet(attr["tweetId"])
                 }
             )
 
             function injectTweet(id) {
+                $("#embed-tweet").children().remove();
                 twttr.ready(function () {
+                    console.log("ready")
                     twttr.widgets.createTweet(id, $("#embed-tweet")[0]).then(function () {
                         var i = $(".twitter-tweet")[0]
 
                         $(i.contentDocument).find('.mediacard img').appendTo('.text-container').addClass('tweet-image')
                         $(i.contentDocument).find('.tweet-text').appendTo('.text-container')
-                        $('.author').html($(i.contentDocument).find('.tweet-authorname').text())
+                        $('.author').html($(i.contentDocument).find('.tweetauthor-name').text())
                         $('.date').html($(i.contentDocument).find('.dt-updated').text())
                         $('.author-picture').css('background-image', "url(" + $(i.contentDocument).find('.avatar').attr('src') + ")")
                     })
 
                 })
             }
+
+            el.on("$destroy", function() {
+                $("#embed-tweet").children().remove();
+            })
 
         }
     }

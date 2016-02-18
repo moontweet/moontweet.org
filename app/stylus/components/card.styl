@@ -1,8 +1,11 @@
 .card {
 
-  +below(m) {
-    display: none;
+  &.no-mobile {
+    +below(m) {
+      display: none;
+    }
   }
+
 
   box-sizing: border-box;
   position: relative;
@@ -14,6 +17,11 @@
   padding: 20px;
   padding-bottom: 80px;
   color: #333;
+  border-radius: 3px;
+
+  &.fluo {
+    box-shadow: 0 0 20px #29A2FF;
+  }
 
   .stamp {
     position: absolute;

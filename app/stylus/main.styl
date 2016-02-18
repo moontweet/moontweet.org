@@ -25,7 +25,7 @@
 html, body {
   background: $background;
   color: $text-color;
-  font-family: "Droid Sans";
+  font-family: $primary-font
   height: 100%;
   margin: 0;
   padding: 0;
@@ -48,7 +48,7 @@ button:focus {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 +above(m) {
@@ -59,6 +59,12 @@ button:focus {
   .desktop {
     display: block;
     height: 100%;
+  }
+
+  .above-footer {
+    position: absolute;
+    align(horizontal)
+    bottom: 60px;
   }
 
 }
@@ -97,8 +103,14 @@ button:focus {
 }
 
 .mono-text {
-  color: #34474b;
-  font-family: "Cutive Mono";
+  font-family: $secondary-font;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+
+.absolute-center {
+  align()
 }
 
 

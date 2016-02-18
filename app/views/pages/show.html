@@ -1,10 +1,10 @@
 <div class="above">
-    <div class="card" tweet-id="{{ $state.params.id }}">
+    <div class="card" tweet-id="{{ tweetID }}">
         <img class="stamp" src="images/stamp.svg">
 
         <div class="text-container">
             <!--<img class='tweet-image'-->
-                 <!--src="http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/track-to-the-moon-emily-stauring.jpg">-->
+            <!--src="http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/track-to-the-moon-emily-stauring.jpg">-->
 
 
         </div>
@@ -24,9 +24,17 @@
 
 
     </div>
+
+    <p class="mono-text" style="text-align: center; margin-top: 30px">
+        TWEET N: 3.000.000<br>
+        EXTIMATED MOON DELIVERY<br>
+        LATE 2106
+    </p>
 </div>
 
 <div id="embed-tweet" style="position: absolute; top: -100000px; left: -100000px"></div>
 
 
-
+<div class="notification" ng-show="$state.params.n">
+    Ciao bello
+</div>
