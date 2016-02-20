@@ -3,5 +3,6 @@
 node_modules/
 .idea/
 app/sass/
+dist/
 moontweet.iml
 .DS_Store

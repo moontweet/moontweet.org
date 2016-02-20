@@ -6,7 +6,7 @@
             Planeth Earth<br>
             11 December 2015
         </div>
-        <textarea class="text" placeholder="Write a message"></textarea>
+        <textarea maxlength="140" class="text" placeholder="Write a message" ng-model="tweetText"></textarea>
     </div>
 
     <div class="footer">
@@ -17,7 +17,7 @@
         <div class="right">
             <div>
                 <span class="letter-counter">120</span>
-                <a class="button button-rounded button-twitter">tweet</a>
+                <a class="button button-twitter button-rounded popup" href="http://twitter.com/share?url=false&text={{ tweetText | escape }}">Tweet</a>
             </div>
         </div>
     </div>
