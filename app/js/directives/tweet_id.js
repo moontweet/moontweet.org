@@ -42,10 +42,13 @@ app.directive("tweetId", [function() {
                         var i = $(".twitter-tweet")[0]
 
                         $(i.contentDocument).find('.mediacard img').appendTo('.text-container').addClass('tweet-image')
-                        $(i.contentDocument).find('.tweet-text').appendTo('.text-container')
+                        $(i.contentDocument).find('.tweet-text').appendTo('.text-container').addClass('tweet-text')
                         $('.author').html($(i.contentDocument).find('.tweetauthor-name').text())
                         $('.date').html($(i.contentDocument).find('.dt-updated').text())
                         $('.author-picture').css('background-image', "url(" + $(i.contentDocument).find('.avatar').attr('src') + ")")
+
+                        el.velocity({opacity: 1}, 1000)
+                        el.parent().find(".mono-text").velocity({opacity: 1}, 1000)
                     })
 
                 })
