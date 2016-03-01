@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta property="og:site_name" content="Moontweet" />
+<meta property="og:title" content="Moontweet" />
+<meta property="og:type" content="Cause" />
+<meta property="og:url" content="www.moontweet.org" />
+<meta property="og:image" content="http://www.moontweet.org/img/moontweet-social.jpg" />
+<meta name="twitter:site" content="www.moontweet.org">
+<meta name="twitter:title" content="Moontweet" />
+<meta name="twitter:description" content="Send a tweet to the moon" />
+<meta name="twitter:url" content="www.moontweet.org" />
+<meta name="twitter:image" content="http://www.moontweet.org/img/moontweet-social-qd.jpg" />
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="Send a tweet to the moon" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" id="ppstyle" type="text/css" href="style.css">
+     <link rel='stylesheet' href='./css/animate.css' /><link rel='stylesheet' href='./css/font-awesome.min.css'/>
+    <link rel='stylesheet' href='./css/animate.css' /><link href='http://fonts.googleapis.com/css?family=Droid+Serif&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/blocs.js"></script>
+    
+    <title>Send a tweet to the Moon</title>
+</head>
+<body>
+<!-- Main container -->
+<div class="page-container">
+    
+<!-- Hero Bloc -->
+<div id="hero-bloc" class="bloc hero bg-backg bgc-oxford-blue d-bloc">
+	<div class="video-bg-contianer">
+	<div class="b-bloc"></div>
+		<video class="bloc-video" preload="auto" loop="loop" autoplay="autoplay">
+			<source src="vid/moonvid.mp4" type="video/mp4" />
+		</video>
+	</div>
+	<div class="hide container bloc-sm hero-nav">
+		<nav class="navbar row">
+			<div class="navbar-header">
+			</div>
+			<div class="navbar-collapse navbar-1 collapse in">
+				<ul class="site-navigation nav navbar-nav pull-right">
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="v-center">
+		<div class="vc-content row">
+			<div class="col-sm-6 col-sm-offset-1 col-md-4 col-md-offset-1 pd-m mg-m-b">
+				<img src="img/logo_moontweet.png" width="80" class="center-m img-responsive mg-lg fadeIn animated" />
+				<h3 class="mg-md tc-white fadeIn animated">
+					Send a tweet to the moon
+				</h3>
+				<p class="mg-lg fadeIn animated">
+					<a href="https://twitter.com/moontw_org" target="_blank" class="text-btn">Moontweet</a> is collecting inspiring messages in form of short tweets to be delivered to the Moon surface in late 2017. The messages will be stored in digital format within a capsule integrated into a single Moon Pod on the first <a href="https://www.astrobotic.com/lunar-delivery" target="_blank" class="text-btn">Astrobotic's</a> lunar lander.<br/><br />Be inspired! Use <a href="http://twitter.com/intent/tweet/?text=%23moondelivery" target="_blank" class="popup">#moondelivery</a> to send a tweet to the Moon
+ <br/><br/>
+				</p>
+				<div class="">
+					<a href="http://twitter.com/intent/tweet/?text=%23moondelivery" target="_blank" class="center-m btn btn-lg btn-rd btn-clean btn-mountain-meadow animated fadeIn animDelay02 popup"><span class="fa fa-twitter icon-spacer"></span>Send it now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hero Bloc END -->
+</div>
+<!-- Main container END -->
+<audio src="music/sound.mp3" autoplay="true" >
+<p>If you are reading this, it is because your browser does not support the audio element.</p>
+</audio>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72598668-1', 'auto');
+  ga('send', 'pageview');
+
+
+  $('.popup').click(function(event) {
+	  var width  = 575,
+			  height = 300,
+			  left   = ($(window).width()  - width)  / 2,
+			  top    = ($(window).height() - height) / 2,
+			  url    = this.href,
+			  opts   = 'status=1' +
+					  ',width='  + width  +
+					  ',height=' + height +
+					  ',top='    + top    +
+					  ',left='   + left;
+
+	  window.open(url, 'twitter', opts);
+
+	  return false;
+  });
+
+</script>
+</body>
+    
+<!-- Google Analytics -->
+
+<!-- Google Analytics END -->
+
+</html>

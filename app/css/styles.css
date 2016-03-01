@@ -427,6 +427,14 @@ header .right:last-child {
   header .right {
     height: 65px;
   }
+  header .right img {
+    position: absolute;
+    transform-style: preserve-3d;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 30px;
+  }
 }
 header .right .button {
   position: absolute;

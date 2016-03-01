@@ -10,16 +10,24 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     $stateProvider
         .state('home', {
             url: "/?a",
+            //views: {
+            //    'header': {
+            //        templateUrl: "views/partials/header_home.html"
+            //    },
+            //    'container': {
+            //        templateUrl: "views/pages/home.html",
+            //        controller: "homeController"
+            //    }
+            //},
+            //animation: true
+
             views: {
-                'header': {
-                    templateUrl: "views/partials/header_home.html"
-                },
-                'container': {
-                    templateUrl: "views/pages/home.html",
-                    controller: "homeController"
+                container: {
+                    template: "<iframe src='public/index.html' style='position: fixed; top:0; left: 0; width: 100%; height: 100%; border:none'>"
                 }
-            },
-            animation: true
+
+            }
+
         })
         .state('tweets', {
             url: "/tweets/:sname?n",
