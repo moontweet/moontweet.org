@@ -57,6 +57,12 @@ module.exports = function (grunt) {
                 cwd: "app/languages/",
                 src: '**',
                 dest: 'dist/languages/'
+            },
+            public: {
+                expand: true,
+                cwd: "app/public/",
+                src: '**',
+                dest: 'dist/public/'
             }
         },
 
