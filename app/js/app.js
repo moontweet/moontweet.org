@@ -23,7 +23,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 
             views: {
                 container: {
-                    template: "<iframe src='public/index.html' style='position: fixed; top:0; left: 0; width: 100%; height: 100%; border:none'>"
+                    template: "<div style='overflow:auto;-webkit-overflow-scrolling:touch; position: fixed; top:0; left: 0; width: 100%; height: 100%;'><iframe src='public/index.html' style='width: 100%; height: 100%; border:none'></iframe></div>"
                 }
 
             }
