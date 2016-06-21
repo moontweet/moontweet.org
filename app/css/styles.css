@@ -191,6 +191,13 @@
   margin-right: 10px;
   font-family: "Cutive Mono";
 }
+.loader {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .card {
   box-sizing: border-box;
   position: relative;
@@ -217,12 +224,15 @@
   right: 40px;
   top: 40px;
 }
-.card .tweet-image {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  max-width: 100%;
-  height: auto;
+.card .tweet-image,
+.card .MediaCard-mediaAsset iframe {
+  display: block !important;
+  margin: 0 auto !important;
+  margin-bottom: 20px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  border: 0 !important;
+  position: relative !important;
 }
 .card .tweet-text {
   padding: 0 10px;
@@ -240,6 +250,18 @@
   height: 120px;
   border: none;
   resize: none;
+}
+.card .text-container .Emoji {
+  width: 17px;
+}
+.card .text-container .mediacard,
+.card .text-container .mediacard-media {
+  width: 100%;
+}
+.card .text-container .mediacard *,
+.card .text-container .mediacard-media * {
+  height: auto;
+  padding-bottom: 0;
 }
 .card .pd-0 {
   padding: 0;
@@ -276,12 +298,14 @@
   display: inline-block;
   vertical-align: top;
   height: 100%;
+  width: calc(100% - 50px - 70px - 10px);
 }
 .card .card-footer .details-container .details {
   position: absolute;
   transform-style: preserve-3d;
   top: 50%;
   transform: translateY(-50%);
+  position: relative;
 }
 .card .card-footer .details-container .details .author {
   display: block;
@@ -292,6 +316,19 @@
   display: block;
   color: #aaa;
   font-size: 0.8em;
+}
+.card .card-footer .share-container {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+  width: 70px;
+  text-align: right;
+}
+.card .card-footer .share-container img {
+  width: 25px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .card .card-footer-show {
   padding: 20px 30px;
@@ -446,10 +483,10 @@ header .right .button {
 .mobile-tweet-editor {
   display: none;
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #fff;
   box-sizing: border-box;
 }

@@ -8,6 +8,7 @@
   <title>Send a tweet to the Moon</title>
   <meta name="description" content="collecting inspiring messages in form of short tweets to be delivered to the Moon surface">
   <meta name="author" content="Moontweet">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -64,6 +65,7 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
 <!-- build:js js/dependencies.concat.min.js -->
 <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+<script src="bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js"></script>
 <script src="bower_components/moment/moment.js"></script>
 <script src="bower_components/angularjs/angular.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -90,6 +92,9 @@
 <script src="js/controllers/home_controller.js"></script>
 <script src="js/controllers/tweets_controller.js"></script>
 <!-- endbuild -->
+
+<script>window.viewportUnitsBuggyfill.init();</script>
+
 
 
 </body>

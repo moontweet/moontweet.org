@@ -10,23 +10,23 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     $stateProvider
         .state('home', {
             url: "/?a",
-            //views: {
-            //    'header': {
-            //        templateUrl: "views/partials/header_home.html"
-            //    },
-            //    'container': {
-            //        templateUrl: "views/pages/home.html",
-            //        controller: "homeController"
-            //    }
-            //},
-            //animation: true
-
             views: {
-                container: {
-                    template: "<div style='overflow:auto;-webkit-overflow-scrolling:touch; position: fixed; top:0; left: 0; width: 100%; height: 100%;'><iframe src='public/index.html' style='width: 100%; height: 100%; border:none'></iframe></div>"
+                'header': {
+                    templateUrl: "views/partials/header_home.html"
+                },
+                'container': {
+                    templateUrl: "views/pages/home.html",
+                    controller: "homeController"
                 }
+            },
+            animation: true
 
-            }
+            //views: {
+            //    container: {
+            //        template: "<div style='overflow:auto;-webkit-overflow-scrolling:touch; position: fixed; top:0; left: 0; width: 100%; height: 100%;'><iframe src='public/index.html' style='width: 100%; height: 100%; border:none'></iframe></div>"
+            //    }
+            //
+            //}
 
         })
         .state('tweets', {

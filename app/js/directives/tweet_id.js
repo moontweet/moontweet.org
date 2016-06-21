@@ -1,9 +1,9 @@
 var app = angular.module("t2m");
 
-app.directive("tweetId", [function() {
+app.directive("tweetId", ['$timeout', function ($timeout) {
     return {
         restrict: "EA",
-        controller: function() {
+        controller: function () {
             window.twttr = (function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0],
                     t = window.twttr || {};
@@ -22,39 +22,51 @@ app.directive("tweetId", [function() {
             }(document, "script", "twitter-wjs"));
 
         },
-        link: function(scope, el, attr) {
+        link: function (scope, el, attr) {
+
 
             scope.$watch(
-                function() {
+                function () {
                     return attr["tweetId"];
                 },
-                function(tid) {
+                function (tid) {
                     if (tid)
-                        injectTweet(attr["tweetId"])
+                        injectTweet(attr["tweetId"], scope)
                 }
             )
 
-            function injectTweet(id) {
+            function injectTweet(id, scope) {
                 $("#embed-tweet").children().remove();
                 twttr.ready(function () {
-                    console.log("ready")
+
                     twttr.widgets.createTweet(id, $("#embed-tweet")[0]).then(function () {
                         var i = $(".twitter-tweet")[0]
 
-                        $(i.contentDocument).find('.mediacard img').appendTo('.text-container').addClass('tweet-image')
-                        $(i.contentDocument).find('.tweet-text').appendTo('.text-container').addClass('tweet-text')
-                        $('.author').html($(i.contentDocument).find('.tweetauthor-name').text())
-                        $('.date').html($(i.contentDocument).find('.dt-updated').text())
-                        $('.author-picture').css('background-image', "url(" + $(i.contentDocument).find('.avatar').attr('src') + ")")
+
+                        if ($(i.shadowRoot).find('.Icon--playCircle').length > 0) {
+                            $(i.shadowRoot).find('.Icon--playCircle').click();
+                            $(i.shadowRoot).find('.MediaCard-mediaAsset').appendTo('.text-container').addClass('tweet-image')
+                        } else {
+                            $(i.shadowRoot).find('.mediacard img').appendTo('.text-container').addClass('tweet-image')
+                        }
+
+                        $(i.shadowRoot).find('.Tweet-text').appendTo('.text-container').addClass('tweet-text')
+                        $('.author').html($(i.shadowRoot).find('.TweetAuthor-name').text())
+                        $('.date').html($(i.shadowRoot).find('.dt-updated').text())
+                        $('.author-picture').css('background-image', "url(" + $(i.shadowRoot).find('.Avatar').attr('src') + ")")
 
                         el.velocity({opacity: 1}, 1000)
                         el.parent().find(".mono-text").velocity({opacity: 1}, 1000)
+                        $timeout(function () {
+                            scope.ready = true;
+                        })
+
                     })
 
                 })
             }
 
-            el.on("$destroy", function() {
+            el.on("$destroy", function () {
                 $("#embed-tweet").children().remove();
             })
 

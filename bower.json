@@ -25,7 +25,8 @@
     "angular-moment": "~0.8.2",
     "angular-ui-router": "~0.2.11",
     "lodash": "~3.10.1",
-    "normalize-css": "normalize.css#~3.0.3"
+    "normalize-css": "normalize.css#~3.0.3",
+    "viewport-units-buggyfill": "~0.6.0"
   },
   "devDependencies": {
     "jeet": "~6.1.2"

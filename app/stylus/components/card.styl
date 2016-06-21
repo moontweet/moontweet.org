@@ -1,3 +1,7 @@
+.loader {
+  align()
+}
+
 .card {
 
   &.no-mobile {
@@ -5,7 +9,6 @@
       display: none;
     }
   }
-
 
   box-sizing: border-box;
   position: relative;
@@ -29,12 +32,16 @@
     top: 40px;
   }
 
-  .tweet-image {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    max-width: 100%;
-    height: auto;
+  .tweet-image, .MediaCard-mediaAsset iframe {
+    display: block !important;
+    margin: 0 auto !important;
+    margin-bottom: 20px !important;
+    max-width: 100% !important;
+    height: auto !important;
+
+    border: 0 !important;
+    position: relative !important;
+
   }
 
   .tweet-text {
@@ -43,6 +50,7 @@
     a {
       color: #0084B4
     }
+
   }
 
   .text-container {
@@ -57,13 +65,24 @@
       resize: none;
     }
 
-  }
-    
-  .pd-0{
-      padding: 0;
+    .Emoji {
+      width: 17px;
+    }
+
+    .mediacard, .mediacard-media {
+      width: 100%;
+
+      * {
+        height: auto;
+        padding-bottom: 0;
+      }
+    }
+
   }
 
-
+  .pd-0 {
+    padding: 0;
+  }
 
   .card-footer {
     box-sizing: border-box
@@ -97,10 +116,11 @@
       display: inline-block;
       vertical-align: top;
       height: 100%;
+      width: calc(100% - 50px - 70px - 10px) // 100% - picture-container - share-container - a little space
 
       .details {
         align(vertical)
-
+        position: relative
 
         .author {
           display: block;
@@ -116,14 +136,28 @@
       }
     }
 
+    .share-container {
+      display: inline-block;
+      vertical-align: top;
+      height: 100%;
+      width: 70px;
+      text-align: right;
+
+      img {
+        width: 25px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%)
+      }
+    }
 
   }
-    
-    .card-footer-show{
-      padding: 20px 30px;
-      height: 100px;
-    }
-    
+
+  .card-footer-show {
+    padding: 20px 30px;
+    height: 100px;
+  }
+
   .head {
     font-size: 13px;
     margin-top: 10px;
@@ -131,7 +165,7 @@
   }
 }
 
-.card-show{
+.card-show {
   padding-bottom: 110px;
   width: 380px;
 }

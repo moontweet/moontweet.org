@@ -1,5 +1,9 @@
 <div class="above">
+
+    <div class="loader" ng-hide="ready">Intercepting lunar tweet...</div>
+
     <div class="card card-show" tweet-id="{{ tweetID }}" style="opacity: 0">
+
         <img class="stamp" src="images/bollo.svg">
 
         <div class="text-container pd-0">
@@ -20,6 +24,11 @@
                     <span class="date"></span>
                 </div>
             </div>
+
+            <div class="share-container">
+                <img src="images/share-twitter-10.svg" />
+                <img src="images/share-facebook-11.svg" />
+            </div>
         </div>
 
     </div>
@@ -33,6 +42,7 @@
 </div>
 
 <div id="embed-tweet" style="position: absolute; top: -100000px; left: -100000px"></div>
+<!--<div id="embed-tweet"></div>-->
 
 
 <div class="notification" ng-show="$state.params.n">
