@@ -30,7 +30,7 @@
   color: #fff;
 }
 .mobile .headline a {
-  color: #00aced;
+  color: #c7b299;
 }
 .mobile .footer {
   position: absolute;
@@ -61,7 +61,7 @@
   display: block;
   margin-top: 60px;
   margin-bottom: 60px;
-  color: #00aced;
+  color: #c7b299;
 }
 .screen {
   padding: 0;
@@ -277,6 +277,10 @@
   text-align: right;
   margin-top: 30px;
 }
+.card .card-footer .letter-counter {
+  color: #808080;
+  margin-right: 10px;
+}
 .card .card-footer .picture-container {
   display: inline-block;
   vertical-align: top;
@@ -337,7 +341,8 @@
 .card .head {
   font-size: 13px;
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  color: #808080;
 }
 .card-show {
   padding-bottom: 110px;
@@ -407,20 +412,18 @@ header .left .moontweet .menu-icon {
   top: 50%;
   transform: translateY(-50%);
 }
-header .left .moontweet .title {
-  font-family: "Roboto Slab", Helvetica, Arial, serif;
-  font-size: 2.5rem;
-  font-weight: 300;
-}
-@media only screen and (max-width: 800px) {
-  header .left .moontweet .title {
-    font-size: 2rem;
-    font-weight: 300;
-  }
-}
 header .left .moontweet .claim {
   margin-left: 20px;
   font-size: 0.8rem;
+}
+header .left .moontweet .logo {
+  padding: 30px 0;
+  width: 180px;
+}
+@media only screen and (max-width: 800px) {
+  header .left .moontweet .logo {
+    padding: 20px 0;
+  }
 }
 header .left ul.nav {
   display: inline-block;

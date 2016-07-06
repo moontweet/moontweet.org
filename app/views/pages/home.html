@@ -10,7 +10,7 @@
         </div>
 
         <div class="card fluo absolute-center no-mobile">
-            <img class="stamp" width="35px" src="images/logo-b.svg">
+            <img class="stamp" width="50px" src="images/logo-b.svg">
 
             <div class="text-container">
                 <p class="head">
@@ -18,12 +18,12 @@
                     13 December 2016
                 </p>
 
-                <textarea maxlength="140" ng-trim="false" ng-model="tweetText" placeholder="Write your tweet using #moondelivery"></textarea>
+                <textarea autofocus="true" maxlength="140" ng-trim="false" ng-model="tweetText" placeholder="#moondelivery"></textarea>
 
             </div>
 
             <div class="card-footer">
-                <span>{{ 140 - tweetText.length }}</span>
+                <span class="letter-counter">{{ 140 - tweetText.length }}</span>
                 <a class="button button-twitter button-rounded popup" href="http://twitter.com/share?url=false&text={{ tweetText | escape }}">Tweet</a>
             </div>
         </div>
