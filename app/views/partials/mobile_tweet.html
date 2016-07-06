@@ -16,7 +16,7 @@
 
         <div class="right">
             <div>
-                <span class="letter-counter">120</span>
+                <span class="letter-counter">{{ 140 - tweetText.length }}</span>
                 <a class="button button-twitter button-rounded popup" href="http://twitter.com/share?url=false&text={{ tweetText | escape }}">Tweet</a>
             </div>
         </div>
