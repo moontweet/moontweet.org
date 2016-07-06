@@ -18,7 +18,7 @@
 .desktop .headline {
   text-align: center;
   display: none;
-  font-family: "Roboto Slab", Helvetica, Arial, serif;
+  font-family: "Roboto Slab", "Droid Serif", Helvetica, Arial, serif;
 }
 .desktop .headline h1 {
   font-weight: 100;
@@ -223,6 +223,9 @@
   position: absolute;
   right: 40px;
   top: 40px;
+  z-index: 9;
+  width: 50px;
+  opacity: 0.75;
 }
 .card .tweet-image,
 .card .MediaCard-mediaAsset iframe {
@@ -367,9 +370,6 @@ header {
     float: right;
     margin-top: 20px;
   }
-  header .stamp path {
-    fill: #fff;
-  }
 }
 header .left {
   *zoom: 1;
@@ -476,12 +476,18 @@ header .right:last-child {
     width: 30px;
   }
 }
+header .right .nav,
 header .right .button {
   position: absolute;
   transform-style: preserve-3d;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
+}
+header .right .nav span,
+header .right .button span {
+  margin: 20px;
+  color: #c7b299;
 }
 .mobile-tweet-editor {
   display: none;
@@ -599,7 +605,7 @@ html,
 body {
   background: #000533;
   color: #fff;
-  font-family: "Roboto", Helvetica, Arial, serif;
+  font-family: "Roboto", "Droid Sans", Helvetica, Arial, serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -669,7 +675,7 @@ button:focus {
   }
 }
 .mono-text {
-  font-family: "Roboto Slab", Helvetica, Arial, serif;
+  font-family: "Roboto Slab", "Droid Serif", Helvetica, Arial, serif;
   font-weight: 100;
   letter-spacing: 1px;
 }

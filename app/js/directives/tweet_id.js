@@ -1,6 +1,6 @@
 var app = angular.module("t2m");
 
-app.directive("tweetId", ['$timeout', function ($timeout) {
+app.directive("tweetId", ['$timeout', '$state', function ($timeout, $state) {
     return {
         restrict: "EA",
         controller: function () {
@@ -50,15 +50,18 @@ app.directive("tweetId", ['$timeout', function ($timeout) {
                             $(i.shadowRoot).find('.mediacard img').appendTo('.text-container').addClass('tweet-image')
                         }
 
-                        $(i.shadowRoot).find('.Tweet-text').appendTo('.text-container').addClass('tweet-text')
+                        $(i.shadowRoot).find('.Tweet-text').appendTo('.text-container').addClass('tweet-text');
+                        $(".author-link").attr("href", "https://www.twitter.com/" + $state.params.sname);
                         $('.author').html($(i.shadowRoot).find('.TweetAuthor-name').text())
                         $('.date').html($(i.shadowRoot).find('.dt-updated').text())
                         $('.author-picture').css('background-image', "url(" + $(i.shadowRoot).find('.Avatar').attr('src') + ")")
 
-                        el.velocity({opacity: 1}, 1000)
+                        el.velocity({opacity: 1}, 1000);
                         el.parent().find(".mono-text").velocity({opacity: 1}, 1000)
                         $timeout(function () {
                             scope.ready = true;
+                            scope.screen_name = $state.params.sname;
+                            scope.tweet_text = "This tweet by @" + scope.screen_name + " is going to be sent to the moon!"
                         })
 
                     })
