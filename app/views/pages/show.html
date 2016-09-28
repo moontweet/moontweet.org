@@ -1,54 +1,22 @@
 <div class="above">
 
-    <div class="loader" ng-hide="ready">Intercepting lunar tweet...</div>
 
-    <div class="card card-show" tweet-id="{{ tweetID }}" style="opacity: 0">
 
-        <img class="stamp" src="images/logo-black.svg">
+    <div id='embedded-tweet' embed-tweet="{{ tweetID }}">
+        <div class="loader" ng-hide="ready">Intercepting lunar tweet...</div>
+        <div id="tweet-content" style="display: none; "></div>
 
-        <div class="text-container pd-0">
-            <!--<img class='tweet-image'-->
-            <!--src="http://images.fineartamerica.com/images/artworkimages/mediumlarge/1/track-to-the-moon-emily-stauring.jpg">-->
-        </div>
-
-        <div class="card-footer card-footer-show" style="text-align: left">
-            <div class="picture-container">
-                <a target="_blank" class="author-link">
-                    <div class="author-picture"></div>
-                </a>
-            </div>
-
-            <div class="details-container">
-                <div class="details">
-                    <a target="_blank" class="author-link">
-                        <span class="author"></span>
-                    </a>
-                    <span class="date"></span>
-                </div>
-            </div>
-
-            <div class="share-container">
-                <a id='twitter-share'
-                   href="http://twitter.com/intent/tweet/?url=http%3A%2F%2Fmoontweet.org%2Ftweets%2F{{ screen_name }}&text={{ tweet_text }}"
-                   target="_blank">
-                    <img src="images/share-twitter-10.svg"/>
-                </a>
-                <!--<img src="images/share-facebook-11.svg"/>-->
-            </div>
-        </div>
-
+        <p class="mono-text" style="text-align: center; margin-top: 30px; opacity: 0">
+            ESTIMATED MOON DELIVERY<br>
+            LATE 2017
+        </p>
     </div>
 
-    <p class="mono-text" style="text-align: center; margin-top: 30px; opacity: 0">
-        ESTIMATED MOON DELIVERY<br>
-        LATE 2017
-    </p>
+
 
 
 </div>
 
-<div id="embed-tweet" style="position: absolute; top: -100000px; left: -100000px"></div>
-<!--<div id="embed-tweet"></div>-->
 
 
 <div class="notification" ng-show="$state.params.n">

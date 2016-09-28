@@ -191,6 +191,19 @@
   margin-right: 10px;
   font-family: "Cutive Mono";
 }
+#embedded-tweet {
+  position: absolute;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 20px;
+}
+@media only screen and (max-width: 800px) {
+  #embedded-tweet {
+    width: 400px;
+  }
+}
 .loader {
   position: absolute;
   transform-style: preserve-3d;
