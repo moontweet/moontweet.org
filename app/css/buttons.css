@@ -338,8 +338,8 @@
 
 .button-twitter,
 .button-twitter-flat {
-  background-color: #C7B299;
-  border-color: #C7B299;
+  background-color: #9D9D9C;
+  border-color: #9D9D9C;
   color: #FFF; }
   .button-twitter:visited,
   .button-twitter-flat:visited {
@@ -347,16 +347,16 @@
   .button-twitter:hover, .button-twitter:focus,
   .button-twitter-flat:hover,
   .button-twitter-flat:focus {
-    background-color: #d9cbba;
-    border-color: #d9cbba;
+    background-color: #b6b6b6;
+    border-color: #b6b6b6;
     color: #FFF; }
   .button-twitter:active, .button-twitter.active, .button-twitter.is-active,
   .button-twitter-flat:active,
   .button-twitter-flat.active,
   .button-twitter-flat.is-active {
-    background-color: #bfb1a1;
-    border-color: #bfb1a1;
-    color: #b59978; }
+    background-color: #9d9d9d;
+    border-color: #9d9d9d;
+    color: #848482; }
 
 /*
 * Base Layout Styles
@@ -626,13 +626,13 @@
   .button-border.button-twitter, .button-twitter.button-border-thin, .button-twitter.button-border-thick,
   .button-border-thin.button-twitter,
   .button-border-thick.button-twitter {
-    color: #C7B299; }
+    color: #9D9D9C; }
     .button-border.button-twitter:hover, .button-twitter.button-border-thin:hover, .button-twitter.button-border-thick:hover, .button-border.button-twitter:focus, .button-twitter.button-border-thin:focus, .button-twitter.button-border-thick:focus,
     .button-border-thin.button-twitter:hover,
     .button-border-thin.button-twitter:focus,
     .button-border-thick.button-twitter:hover,
     .button-border-thick.button-twitter:focus {
-      background-color: rgba(217, 203, 186, 0.9);
+      background-color: rgba(182, 182, 182, 0.9);
       color: rgba(255, 255, 255, 0.9); }
     .button-border.button-twitter:active, .button-twitter.button-border-thin:active, .button-twitter.button-border-thick:active, .button-border.button-twitter.active, .button-twitter.active.button-border-thin, .button-twitter.active.button-border-thick, .button-border.button-twitter.is-active, .button-twitter.is-active.button-border-thin, .button-twitter.is-active.button-border-thick,
     .button-border-thin.button-twitter:active,
@@ -641,7 +641,7 @@
     .button-border-thick.button-twitter:active,
     .button-border-thick.button-twitter.active,
     .button-border-thick.button-twitter.is-active {
-      background-color: rgba(191, 177, 161, 0.7);
+      background-color: rgba(157, 157, 157, 0.7);
       color: rgba(255, 255, 255, 0.5);
       opacity: .3; }
   .button-border.button-giant, .button-giant.button-border-thin, .button-giant.button-border-thick,
@@ -717,7 +717,7 @@
   .button-borderless.button-royal {
     color: #7B72E9; }
   .button-borderless.button-twitter {
-    color: #C7B299; }
+    color: #9D9D9C; }
   .button-borderless.button-giant {
     font-size: 36.4px;
     height: 52.4px;
@@ -824,13 +824,13 @@
     border-color: #5246e2;
     background: #827ae1; }
 .button-raised.button-twitter {
-  border-color: #bea689;
-  background: linear-gradient(#d0bea9, #bea689); }
+  border-color: #90908f;
+  background: linear-gradient(#aaaaa9, #90908f); }
   .button-raised.button-twitter:hover, .button-raised.button-twitter:focus {
-    background: linear-gradient(top, #d5c6b3, #baa182); }
+    background: linear-gradient(top, #b1b1b1, #8b8b8a); }
   .button-raised.button-twitter:active, .button-raised.button-twitter.active, .button-raised.button-twitter.is-active {
-    border-color: #b59978;
-    background: #bfb1a1; }
+    border-color: #848482;
+    background: #9d9d9d; }
 
 /*
 * 3D Buttons
@@ -900,11 +900,11 @@
   .button-3d.button-royal:active, .button-3d.button-royal.active, .button-3d.button-royal.is-active {
     box-shadow: 0 2px 0 #2f21d4, 0 3px 3px rgba(0, 0, 0, 0.2); }
 .button-3d.button-twitter {
-  box-shadow: 0 7px 0 #b59978, 0 8px 3px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 7px 0 #848482, 0 8px 3px rgba(0, 0, 0, 0.3); }
   .button-3d.button-twitter:hover, .button-3d.button-twitter:focus {
-    box-shadow: 0 7px 0 #b19471, 0 8px 3px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 7px 0 #7f7f7d, 0 8px 3px rgba(0, 0, 0, 0.3); }
   .button-3d.button-twitter:active, .button-3d.button-twitter.active, .button-3d.button-twitter.is-active {
-    box-shadow: 0 2px 0 #a18059, 0 3px 3px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 2px 0 #6a6a69, 0 3px 3px rgba(0, 0, 0, 0.2); }
 
 /*
 * Glowing Buttons
@@ -983,11 +983,11 @@
     box-shadow: 0 0 0 rgba(123, 114, 233, 0.3); } }
 @keyframes glowing-twitter {
   from {
-    box-shadow: 0 0 0 rgba(199, 178, 153, 0.3); }
+    box-shadow: 0 0 0 rgba(157, 157, 156, 0.3); }
   50% {
-    box-shadow: 0 0 20px rgba(199, 178, 153, 0.8); }
+    box-shadow: 0 0 20px rgba(157, 157, 156, 0.8); }
   to {
-    box-shadow: 0 0 0 rgba(199, 178, 153, 0.3); } }
+    box-shadow: 0 0 0 rgba(157, 157, 156, 0.3); } }
 /*
 * Glowing Buttons Base Styes
 *
@@ -1181,15 +1181,15 @@
       color: #f2f2f2;
       background: #665ce6; }
 .button-dropdown.button-dropdown-twitter .button-dropdown-list {
-  background: rgba(199, 178, 153, 0.95);
-  border-color: #b59978; }
+  background: rgba(157, 157, 156, 0.95);
+  border-color: #848482; }
   .button-dropdown.button-dropdown-twitter .button-dropdown-list .button-dropdown-divider {
-    border-color: #baa182; }
+    border-color: #8b8b8a; }
   .button-dropdown.button-dropdown-twitter .button-dropdown-list > li > a {
     color: #FFF; }
     .button-dropdown.button-dropdown-twitter .button-dropdown-list > li > a:hover {
       color: #f2f2f2;
-      background: #bea689; }
+      background: #90908f; }
 
 /*
 * Buton Groups
@@ -1315,7 +1315,7 @@
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
   .button-longshadow.button-twitter,
   .button-longshadow-right.button-twitter {
-    text-shadow: 0px 0px #b59978, 1px 1px #b59978, 2px 2px #b59978, 3px 3px #b59978, 4px 4px #b59978, 5px 5px #b59978, 6px 6px #b59978, 7px 7px #b59978, 8px 8px #b59978, 9px 9px #b59978, 10px 10px #b59978, 11px 11px #b59978, 12px 12px #b59978, 13px 13px #b59978, 14px 14px #b59978, 15px 15px #b59978, 16px 16px #b59978, 17px 17px #b59978, 18px 18px #b59978, 19px 19px #b59978, 20px 20px #b59978, 21px 21px #b59978, 22px 22px #b59978, 23px 23px #b59978, 24px 24px #b59978, 25px 25px #b59978, 26px 26px #b59978, 27px 27px #b59978, 28px 28px #b59978, 29px 29px #b59978, 30px 30px #b59978, 31px 31px #b59978, 32px 32px #b59978, 33px 33px #b59978, 34px 34px #b59978, 35px 35px #b59978, 36px 36px #b59978, 37px 37px #b59978, 38px 38px #b59978, 39px 39px #b59978, 40px 40px #b59978, 41px 41px #b59978, 42px 42px #b59978, 43px 43px #b59978, 44px 44px #b59978, 45px 45px #b59978, 46px 46px #b59978, 47px 47px #b59978, 48px 48px #b59978, 49px 49px #b59978, 50px 50px #b59978, 51px 51px #b59978, 52px 52px #b59978, 53px 53px #b59978, 54px 54px #b59978, 55px 55px #b59978, 56px 56px #b59978, 57px 57px #b59978, 58px 58px #b59978, 59px 59px #b59978, 60px 60px #b59978, 61px 61px #b59978, 62px 62px #b59978, 63px 63px #b59978, 64px 64px #b59978, 65px 65px #b59978, 66px 66px #b59978, 67px 67px #b59978, 68px 68px #b59978, 69px 69px #b59978, 70px 70px #b59978, 71px 71px #b59978, 72px 72px #b59978, 73px 73px #b59978, 74px 74px #b59978, 75px 75px #b59978, 76px 76px #b59978, 77px 77px #b59978, 78px 78px #b59978, 79px 79px #b59978, 80px 80px #b59978, 81px 81px #b59978, 82px 82px #b59978, 83px 83px #b59978, 84px 84px #b59978, 85px 85px #b59978; }
+    text-shadow: 0px 0px #848482, 1px 1px #848482, 2px 2px #848482, 3px 3px #848482, 4px 4px #848482, 5px 5px #848482, 6px 6px #848482, 7px 7px #848482, 8px 8px #848482, 9px 9px #848482, 10px 10px #848482, 11px 11px #848482, 12px 12px #848482, 13px 13px #848482, 14px 14px #848482, 15px 15px #848482, 16px 16px #848482, 17px 17px #848482, 18px 18px #848482, 19px 19px #848482, 20px 20px #848482, 21px 21px #848482, 22px 22px #848482, 23px 23px #848482, 24px 24px #848482, 25px 25px #848482, 26px 26px #848482, 27px 27px #848482, 28px 28px #848482, 29px 29px #848482, 30px 30px #848482, 31px 31px #848482, 32px 32px #848482, 33px 33px #848482, 34px 34px #848482, 35px 35px #848482, 36px 36px #848482, 37px 37px #848482, 38px 38px #848482, 39px 39px #848482, 40px 40px #848482, 41px 41px #848482, 42px 42px #848482, 43px 43px #848482, 44px 44px #848482, 45px 45px #848482, 46px 46px #848482, 47px 47px #848482, 48px 48px #848482, 49px 49px #848482, 50px 50px #848482, 51px 51px #848482, 52px 52px #848482, 53px 53px #848482, 54px 54px #848482, 55px 55px #848482, 56px 56px #848482, 57px 57px #848482, 58px 58px #848482, 59px 59px #848482, 60px 60px #848482, 61px 61px #848482, 62px 62px #848482, 63px 63px #848482, 64px 64px #848482, 65px 65px #848482, 66px 66px #848482, 67px 67px #848482, 68px 68px #848482, 69px 69px #848482, 70px 70px #848482, 71px 71px #848482, 72px 72px #848482, 73px 73px #848482, 74px 74px #848482, 75px 75px #848482, 76px 76px #848482, 77px 77px #848482, 78px 78px #848482, 79px 79px #848482, 80px 80px #848482, 81px 81px #848482, 82px 82px #848482, 83px 83px #848482, 84px 84px #848482, 85px 85px #848482; }
     .button-longshadow.button-twitter:active, .button-longshadow.button-twitter.active, .button-longshadow.button-twitter.is-active,
     .button-longshadow-right.button-twitter:active,
     .button-longshadow-right.button-twitter.active,
@@ -1357,7 +1357,7 @@
     .button-longshadow-left.button-royal:active, .button-longshadow-left.button-royal.active, .button-longshadow-left.button-royal.is-active {
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
   .button-longshadow-left.button-twitter {
-    text-shadow: 0px 0px #b59978, -1px 1px #b59978, -2px 2px #b59978, -3px 3px #b59978, -4px 4px #b59978, -5px 5px #b59978, -6px 6px #b59978, -7px 7px #b59978, -8px 8px #b59978, -9px 9px #b59978, -10px 10px #b59978, -11px 11px #b59978, -12px 12px #b59978, -13px 13px #b59978, -14px 14px #b59978, -15px 15px #b59978, -16px 16px #b59978, -17px 17px #b59978, -18px 18px #b59978, -19px 19px #b59978, -20px 20px #b59978, -21px 21px #b59978, -22px 22px #b59978, -23px 23px #b59978, -24px 24px #b59978, -25px 25px #b59978, -26px 26px #b59978, -27px 27px #b59978, -28px 28px #b59978, -29px 29px #b59978, -30px 30px #b59978, -31px 31px #b59978, -32px 32px #b59978, -33px 33px #b59978, -34px 34px #b59978, -35px 35px #b59978, -36px 36px #b59978, -37px 37px #b59978, -38px 38px #b59978, -39px 39px #b59978, -40px 40px #b59978, -41px 41px #b59978, -42px 42px #b59978, -43px 43px #b59978, -44px 44px #b59978, -45px 45px #b59978, -46px 46px #b59978, -47px 47px #b59978, -48px 48px #b59978, -49px 49px #b59978, -50px 50px #b59978, -51px 51px #b59978, -52px 52px #b59978, -53px 53px #b59978, -54px 54px #b59978, -55px 55px #b59978, -56px 56px #b59978, -57px 57px #b59978, -58px 58px #b59978, -59px 59px #b59978, -60px 60px #b59978, -61px 61px #b59978, -62px 62px #b59978, -63px 63px #b59978, -64px 64px #b59978, -65px 65px #b59978, -66px 66px #b59978, -67px 67px #b59978, -68px 68px #b59978, -69px 69px #b59978, -70px 70px #b59978, -71px 71px #b59978, -72px 72px #b59978, -73px 73px #b59978, -74px 74px #b59978, -75px 75px #b59978, -76px 76px #b59978, -77px 77px #b59978, -78px 78px #b59978, -79px 79px #b59978, -80px 80px #b59978, -81px 81px #b59978, -82px 82px #b59978, -83px 83px #b59978, -84px 84px #b59978, -85px 85px #b59978; }
+    text-shadow: 0px 0px #848482, -1px 1px #848482, -2px 2px #848482, -3px 3px #848482, -4px 4px #848482, -5px 5px #848482, -6px 6px #848482, -7px 7px #848482, -8px 8px #848482, -9px 9px #848482, -10px 10px #848482, -11px 11px #848482, -12px 12px #848482, -13px 13px #848482, -14px 14px #848482, -15px 15px #848482, -16px 16px #848482, -17px 17px #848482, -18px 18px #848482, -19px 19px #848482, -20px 20px #848482, -21px 21px #848482, -22px 22px #848482, -23px 23px #848482, -24px 24px #848482, -25px 25px #848482, -26px 26px #848482, -27px 27px #848482, -28px 28px #848482, -29px 29px #848482, -30px 30px #848482, -31px 31px #848482, -32px 32px #848482, -33px 33px #848482, -34px 34px #848482, -35px 35px #848482, -36px 36px #848482, -37px 37px #848482, -38px 38px #848482, -39px 39px #848482, -40px 40px #848482, -41px 41px #848482, -42px 42px #848482, -43px 43px #848482, -44px 44px #848482, -45px 45px #848482, -46px 46px #848482, -47px 47px #848482, -48px 48px #848482, -49px 49px #848482, -50px 50px #848482, -51px 51px #848482, -52px 52px #848482, -53px 53px #848482, -54px 54px #848482, -55px 55px #848482, -56px 56px #848482, -57px 57px #848482, -58px 58px #848482, -59px 59px #848482, -60px 60px #848482, -61px 61px #848482, -62px 62px #848482, -63px 63px #848482, -64px 64px #848482, -65px 65px #848482, -66px 66px #848482, -67px 67px #848482, -68px 68px #848482, -69px 69px #848482, -70px 70px #848482, -71px 71px #848482, -72px 72px #848482, -73px 73px #848482, -74px 74px #848482, -75px 75px #848482, -76px 76px #848482, -77px 77px #848482, -78px 78px #848482, -79px 79px #848482, -80px 80px #848482, -81px 81px #848482, -82px 82px #848482, -83px 83px #848482, -84px 84px #848482, -85px 85px #848482; }
     .button-longshadow-left.button-twitter:active, .button-longshadow-left.button-twitter.active, .button-longshadow-left.button-twitter.is-active {
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4); }
 

@@ -30,7 +30,7 @@
   color: #fff;
 }
 .mobile .headline a {
-  color: #c7b299;
+  color: #9d9d9c;
 }
 .mobile .footer {
   position: absolute;
@@ -61,7 +61,7 @@
   display: block;
   margin-top: 60px;
   margin-bottom: 60px;
-  color: #c7b299;
+  color: #9d9d9c;
 }
 .screen {
   padding: 0;
@@ -500,7 +500,7 @@ header .right .button {
 header .right .nav span,
 header .right .button span {
   margin: 20px;
-  color: #c7b299;
+  color: #9d9d9c;
 }
 .mobile-tweet-editor {
   display: none;
@@ -616,7 +616,7 @@ header .right .button span {
 }
 html,
 body {
-  background: #000533;
+  background: #0a0719;
   color: #fff;
   font-family: "Roboto", "Droid Sans", Helvetica, Arial, serif;
   height: 100%;
