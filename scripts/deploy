@@ -1,0 +1,39 @@
+#!/bin/bash
+# Example: ./deploy staging dev
+
+set -e
+
+ENV=$1
+BRANCH=$2
+
+ENV_URL=`git remote get-url $ENV`
+GITHUB_URL=`git remote get-url github`
+
+echo "-------- $ENV URL: $ENV_URL";
+echo "-------- Github URL: $GITHUB_URL";
+
+if [ $ENV = "production" ]; then
+  GITHUB_BRANCH="master"
+else
+  GITHUB_BRANCH="staging"
+fi
+
+echo "-------- Github branch: $GITHUB_BRANCH";
+
+git checkout $BRANCH;
+grunt build;
+#grunt envpreprocess:$ENV;
+cd ./dist;
+git init;
+git add .;
+git commit -m "deploy";
+git remote add github $GITHUB_URL;
+git remote add $ENV $ENV_URL;
+
+echo "-------- PUSHING: git push $ENV master --force;"
+git push $ENV master --force;
+
+cd ..;
+
+echo "-------- PUSHING: git push github master:$GITHUB_BRANCH --force;"
+git push github $BRANCH:$GITHUB_BRANCH --force;
